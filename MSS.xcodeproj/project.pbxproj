@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,12 @@
 		09016C84260CA29D00B6E04B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09016C83260CA29D00B6E04B /* ViewController.swift */; };
 		09016C86260CA29F00B6E04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09016C85260CA29F00B6E04B /* Assets.xcassets */; };
 		09016C89260CA29F00B6E04B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09016C87260CA29F00B6E04B /* Main.storyboard */; };
+		09016C93260CA2B100B6E04B /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09016C92260CA2B100B6E04B /* Logic.swift */; };
+		09016C9E260CE41B00B6E04B /* ShapiroWilk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09016C9D260CE41B00B6E04B /* ShapiroWilk.swift */; };
+		09016CA1260CE48100B6E04B /* NormalityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09016CA0260CE48100B6E04B /* NormalityTest.swift */; };
+		09016CA5260CEA0600B6E04B /* KolmogorovSmirnov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09016CA4260CEA0600B6E04B /* KolmogorovSmirnov.swift */; };
+		095F7C80260D160600314B31 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 095F7C7F260D160600314B31 /* PythonKit */; };
+		910AF2053CFFA85DD220E24D /* Pods_MSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813937C641D267F5D1B05B28 /* Pods_MSS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,13 @@
 		09016C88260CA29F00B6E04B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09016C8A260CA29F00B6E04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09016C8B260CA29F00B6E04B /* MSS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MSS.entitlements; sourceTree = "<group>"; };
+		09016C92260CA2B100B6E04B /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		09016C9D260CE41B00B6E04B /* ShapiroWilk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapiroWilk.swift; sourceTree = "<group>"; };
+		09016CA0260CE48100B6E04B /* NormalityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalityTest.swift; sourceTree = "<group>"; };
+		09016CA4260CEA0600B6E04B /* KolmogorovSmirnov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolmogorovSmirnov.swift; sourceTree = "<group>"; };
+		34E325BF711759AE2A48A660 /* Pods-MSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSS.release.xcconfig"; path = "Target Support Files/Pods-MSS/Pods-MSS.release.xcconfig"; sourceTree = "<group>"; };
+		6DFDD9D230EB1DE58F58760B /* Pods-MSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSS.debug.xcconfig"; path = "Target Support Files/Pods-MSS/Pods-MSS.debug.xcconfig"; sourceTree = "<group>"; };
+		813937C641D267F5D1B05B28 /* Pods_MSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910AF2053CFFA85DD220E24D /* Pods_MSS.framework in Frameworks */,
+				095F7C80260D160600314B31 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +54,8 @@
 			children = (
 				09016C80260CA29D00B6E04B /* MSS */,
 				09016C7F260CA29D00B6E04B /* Products */,
+				82E76979A80F991E022D10C4 /* Pods */,
+				D23DEF51B8855D4EB9DE97EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +70,43 @@
 		09016C80260CA29D00B6E04B /* MSS */ = {
 			isa = PBXGroup;
 			children = (
+				09016CA3260CE50D00B6E04B /* NormalityTest */,
 				09016C81260CA29D00B6E04B /* AppDelegate.swift */,
 				09016C83260CA29D00B6E04B /* ViewController.swift */,
 				09016C85260CA29F00B6E04B /* Assets.xcassets */,
 				09016C87260CA29F00B6E04B /* Main.storyboard */,
 				09016C8A260CA29F00B6E04B /* Info.plist */,
 				09016C8B260CA29F00B6E04B /* MSS.entitlements */,
+				09016C92260CA2B100B6E04B /* Logic.swift */,
 			);
 			path = MSS;
+			sourceTree = "<group>";
+		};
+		09016CA3260CE50D00B6E04B /* NormalityTest */ = {
+			isa = PBXGroup;
+			children = (
+				09016C9D260CE41B00B6E04B /* ShapiroWilk.swift */,
+				09016CA0260CE48100B6E04B /* NormalityTest.swift */,
+				09016CA4260CEA0600B6E04B /* KolmogorovSmirnov.swift */,
+			);
+			path = NormalityTest;
+			sourceTree = "<group>";
+		};
+		82E76979A80F991E022D10C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDD9D230EB1DE58F58760B /* Pods-MSS.debug.xcconfig */,
+				34E325BF711759AE2A48A660 /* Pods-MSS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D23DEF51B8855D4EB9DE97EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				813937C641D267F5D1B05B28 /* Pods_MSS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,15 +116,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09016C8E260CA29F00B6E04B /* Build configuration list for PBXNativeTarget "MSS" */;
 			buildPhases = (
+				96A06BE8D6564AA10092FDC0 /* [CP] Check Pods Manifest.lock */,
 				09016C7A260CA29D00B6E04B /* Sources */,
 				09016C7B260CA29D00B6E04B /* Frameworks */,
 				09016C7C260CA29D00B6E04B /* Resources */,
+				AE4464925785FBC560AB43B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MSS;
+			packageProductDependencies = (
+				095F7C7F260D160600314B31 /* PythonKit */,
+			);
 			productName = MSS;
 			productReference = 09016C7E260CA29D00B6E04B /* MSS.app */;
 			productType = "com.apple.product-type.application";
@@ -106,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 09016C75260CA29D00B6E04B;
+			packageReferences = (
+				095F7C7E260D160600314B31 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 09016C7F260CA29D00B6E04B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,12 +181,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		96A06BE8D6564AA10092FDC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MSS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE4464925785FBC560AB43B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MSS/Pods-MSS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MSS/Pods-MSS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MSS/Pods-MSS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09016C7A260CA29D00B6E04B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				09016C84260CA29D00B6E04B /* ViewController.swift in Sources */,
+				09016CA1260CE48100B6E04B /* NormalityTest.swift in Sources */,
+				09016CA5260CEA0600B6E04B /* KolmogorovSmirnov.swift in Sources */,
+				09016C9E260CE41B00B6E04B /* ShapiroWilk.swift in Sources */,
+				09016C93260CA2B100B6E04B /* Logic.swift in Sources */,
 				09016C82260CA29D00B6E04B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +368,7 @@
 		};
 		09016C8F260CA29F00B6E04B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DFDD9D230EB1DE58F58760B /* Pods-MSS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -275,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FGF28AWPF2;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = MSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -289,6 +390,7 @@
 		};
 		09016C90260CA29F00B6E04B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E325BF711759AE2A48A660 /* Pods-MSS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,7 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FGF28AWPF2;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = MSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -330,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		095F7C7E260D160600314B31 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		095F7C7F260D160600314B31 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 095F7C7E260D160600314B31 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09016C76260CA29D00B6E04B /* Project object */;
 }
